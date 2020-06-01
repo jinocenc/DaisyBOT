@@ -1,5 +1,6 @@
-# TODO List
+# DaisyBot! Now on Discord
 
+## Project Roadmap
 * [x] Setup project / dependencies
     * npm i discord.js dotenv
 * [x]  Setup eslint
