@@ -7,7 +7,7 @@
     * npx eslint -- init
 * [x] Create a Discord Application / Bot
 * [x] Add bot to Server
-* [ ] Setup basic response commmands
+* [x] Setup basic response commmands
 * [ ] Migrate to GCP
 * [ ] Add additional commands
     * give: 
