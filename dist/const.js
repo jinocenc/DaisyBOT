@@ -6,4 +6,4 @@ export const DAISY_RESP = [
     "_**Chases after a squirrel**_ | Try asking... later..",
 ];
 export const ERROR_RESP = "_**tilts head in confusion**_ Daisy doesn't quite understand what you mean, try using `:9 help` and try again";
-export const HELP = ">>> use `:9` to interact with Daisy!\n `:9`: \n      `daisy,`\n      `help`";
+export const HELP = ">>> Use `:9` to interact with Daisy!\n `:9`: \n      `daisy,` [question]\n      `help`";

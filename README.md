@@ -1,5 +1,18 @@
 # DaisyBot! Now on Discord
-
+## Usage
+* give: 
+    * [treat] _gives treat to Daisy_
+    * [rub] (**defaults** to `belly`)
+    * [scratch] (**defaults** to `behind ears`) 
+* teach 
+    * [trick] (user defined trick name **defaults** to `ERR_RESP`)
+        * [emoji] (user defined emoji to display **defaults** to `none`)
+        <!-- you can overwrite a trick by calling it again (maybe we should use confirmation)-->
+* attack
+    * [user] mentions user to attack
+        * [time] for this amount of time (10m)
+* trick <!-- _performs trick and displays related emoji_ -->
+---
 ## Project Roadmap
 * [x] Setup project / dependencies
     * npm i discord.js dotenv
@@ -9,15 +22,19 @@
 * [x] Create a Discord Application / Bot
 * [x] Add bot to Server
 * [x] Setup basic response commmands
-* [ ] Migrate to GCP
+* [x] Migrate to GCP
 * [ ] Add additional commands
-    * give: 
-        * [treat] _gives treat to Daisy_
-        * [rub] (**defaults** to `belly`)
-        * [scratch] (**defaults** to `behind ears`) 
-    * teach 
-        * [trick] (user defined trick name **defaults** to `ERR_RESP`)
-            * [emoji] (user defined emoji to display **defaults** to `none`)
-            <!-- you can overwrite a trick by calling it again (maybe we should use confirmation)-->
-    * (trick) _performs trick and displays related emoji_
+    * give
+    * teach
+    * attack
 * [ ] Integrate CDN for image hosting/GIFs (optional)
+
+<!-- 
+_**BARK**_                                                          
+_**BARK**__**BARK**_
+_**BARK**__**BARK**__**BARK**_
+_**BARK**__**BARK**__**BARK**__**BARK**_
+_**BARK**__**BARK**__**BARK**_
+_**BARK**__**BARK**_
+_**BARK**_
+ -->
