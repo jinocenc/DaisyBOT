@@ -12,9 +12,10 @@
     "mjs": "tsc -d && mv dist/index.js dist/index.mjs",
     "cjs": "tsc -d",
     "build": "npm run cjs",
-    "start": "nohup node --es-module-specifier-resolution=node -r dotenv/config ./dist/index.js> /dev/null 2>&1 & pgrep -n > save.pid",
+    "start": "nohup node --es-module-specifier-resolution=node -r dotenv/config ./dist/index.js > /dev/null 2 > &1 & pgrep -n > save.pid",
     "stop" : "pkill -F save.pid &&  rm save.pid",
-    "deploy": "bash ./scripts/deploy.sh"
+    "deploy": "bash ./scripts/deploy.sh",
+    "ssh": "bash ./scripts/ssh.sh"
   },
   "repository": {
     "type": "git",
