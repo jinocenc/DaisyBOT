@@ -10,9 +10,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import { CALLSIGN, ERROR_RESP } from "../const.js";
 import { advice } from "./advice";
 import { help } from "./help";
+import { give } from "./give";
 const COMMANDS = {
     "daisy,": advice,
     help: help,
+    give: give
 };
 export const execCommand = (msg) => __awaiter(void 0, void 0, void 0, function* () {
     console.log("message received!");

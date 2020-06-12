@@ -13,7 +13,7 @@
     "cjs": "tsc -d",
     "build": "npm run cjs",
     "start": "nohup node --es-module-specifier-resolution=node -r dotenv/config ./dist/index.js > /dev/null 2 > &1 & pgrep -n > save.pid",
-    "stop" : "pkill -F save.pid &&  rm save.pid",
+    "stop": "pkill -F save.pid &&  rm save.pid",
     "deploy": "bash ./scripts/deploy.sh",
     "ssh": "bash ./scripts/ssh.sh"
   },
@@ -38,8 +38,6 @@
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
     "firebase": "^7.14.6",
-    "firebase-admin": "^8.12.1",
-    "request": "^2.88.2",
-    "request-promise": "^4.2.5"
+    "firebase-admin": "^8.12.1"
   }
 }
