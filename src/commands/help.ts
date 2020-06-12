@@ -1,6 +1,7 @@
-import { HELP } from "../const.js";
-type dm = import('discord.js').Message
+import { embed } from "../util";
+type dm = import("discord.js").Message;
 
-export const help = async (msg:dm)=> {
-    msg.channel.send(HELP)
-}
+export const help = async (msg: dm): Promise<void> => {
+  msg.channel.send(embed);
+  console.log("Help is on the way.");
+};

@@ -21,7 +21,7 @@ export const embed = new Discord.MessageEmbed({
         { name: "\u200B", value: "\u200B" },
     ],
     footer: {
-        text: "DaisyBot v1.1",
+        text: "DaisyBot v1.0.1",
         icon_url: "https://media.discordapp.net/attachments/549847390622973963/720922742467330138/huh_dog.png",
     }
 });

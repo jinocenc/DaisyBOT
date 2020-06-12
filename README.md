@@ -1,3 +1,4 @@
+![alt text](https://media.discordapp.net/attachments/549847390622973963/720922742467330138/huh_dog.png)
 # DaisyBot! Now on Discord
 ## Usage
 * give: 
@@ -23,10 +24,10 @@
 * [x] Add bot to Server
 * [x] Setup basic response commmands
 * [x] Migrate to GCP
-* [ ] Add additional commands
-    * give
-    * teach
-    * attack
+* [x] Add additional commands
+    * [x] give
+    * [ ] teach
+    * [ ] attack
 * [ ] Integrate CDN for image hosting/GIFs (optional)
 
 <!-- 
