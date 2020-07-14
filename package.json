@@ -1,5 +1,5 @@
 {
-  "name": "DaisyBOT",
+  "name": "daisy-bot",
   "version": "1.0.1",
   "description": "",
   "main": "./main.js",
@@ -9,9 +9,7 @@
   ],
   "type": "module",
   "scripts": {
-    "mjs": "tsc -d && mv dist/index.js dist/index.mjs",
-    "cjs": "tsc -d",
-    "build": "npm run cjs",
+    "build": "tsc -d",
     "start": "nohup node --es-module-specifier-resolution=node -r dotenv/config ./dist/index.js > /dev/null 2 > &1 & pgrep -n > save.pid",
     "stop": "pkill -F save.pid &&  rm save.pid",
     "deploy": "bash ./scripts/deploy.sh",

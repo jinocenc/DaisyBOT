@@ -13,10 +13,16 @@ const COMMANDS: { [key: string]: typeof advice} = {
 export const execCommand = async (msg: dm): Promise<void> => {
   if (CALLSIGN.exec(msg.content)) {
     //checks if the command is calling this bot
-    const msgArray = msg.content.split(" ");
-    if (Object.keys(COMMANDS).includes(msgArray[1].toLowerCase())) {
-      const command: string = msgArray[1];
-      await COMMANDS[command](msg);
+    const msgArray: string[] = msg.content.split(" "); //into array
+    const command: string = msgArray[1].toLowerCase();
+    if (Object.keys(COMMANDS).includes(command)) {
+      //checks if command (2nd word) is one of the commands
+      try {
+        await COMMANDS[command](msg);
+      }
+      catch{
+        msg.channel.send(ERROR_RESP) //if command not found
+      }
       return;
     } else {
       msg.channel.send(ERROR_RESP); // asks you to use help function

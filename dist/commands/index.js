@@ -19,10 +19,16 @@ const COMMANDS = {
 export const execCommand = (msg) => __awaiter(void 0, void 0, void 0, function* () {
     if (CALLSIGN.exec(msg.content)) {
         //checks if the command is calling this bot
-        const msgArray = msg.content.split(" ");
-        if (Object.keys(COMMANDS).includes(msgArray[1].toLowerCase())) {
-            const command = msgArray[1];
-            yield COMMANDS[command](msg);
+        const msgArray = msg.content.split(" "); //into array
+        const command = msgArray[1].toLowerCase();
+        if (Object.keys(COMMANDS).includes(command.toLowerCase())) {
+            //checks if command (2nd word) is one of the commands
+            try {
+                yield COMMANDS[command](msg);
+            }
+            catch (_a) {
+                msg.channel.send(ERROR_RESP); //if command not found
+            }
             return;
         }
         else {

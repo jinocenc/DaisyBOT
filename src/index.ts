@@ -1,6 +1,5 @@
 import { execCommand } from "./commands";
 import { client } from "./util";
-import { token } from "../config.json"
 
 client.once("ready", () => {
   console.log("Bot is running...");
@@ -8,4 +7,7 @@ client.once("ready", () => {
 
 client.on("message", execCommand);
 
-client.login(token);
+client.login(process.env.BOT_TOKEN).catch(err => {
+  console.error("invalid bot token")
+  process.exitCode = 1;
+});

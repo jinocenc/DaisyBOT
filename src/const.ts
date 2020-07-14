@@ -1,6 +1,5 @@
-import { prefix } from "../config.json"
-
-export const CALLSIGN = new RegExp(`/^${prefix}s.+/i`); // callsign in regex
+ export const CALLSIGN = /^:9\s.+/i;
+// export const CALLSIGN = new RegExp(`/^${val}\s.+/i`); // callsign in regex
 export const DAISY_RESP = [
   "_**Barks**_ | Daisy thinks that's foolish",
   "_**Wags her tail**_ | Daisy thinks it's likely",
