@@ -9,13 +9,9 @@
   ],
   "type": "module",
   "scripts": {
-    "mjs": "tsc -d && mv dist/index.js dist/index.mjs",
     "cjs": "tsc -d",
     "build": "npm run cjs",
-    "start": "nohup node --es-module-specifier-resolution=node -r dotenv/config ./dist/index.js > /dev/null 2 > &1 & pgrep -n > save.pid",
-    "stop": "pkill -F save.pid &&  rm save.pid",
-    "deploy": "bash ./scripts/deploy.sh",
-    "ssh": "bash ./scripts/ssh.sh"
+    "start": "nohup node --es-module-specifier-resolution=node -r dotenv/config ./dist/index.js > /dev/null 2 > &1 & pgrep -n > save.pid"
   },
   "repository": {
     "type": "git",
@@ -32,12 +28,14 @@
     "@typescript-eslint/eslint-plugin": "^3.0.2",
     "@typescript-eslint/parser": "^3.0.0",
     "eslint": "^7.1.0",
-    "typescript": "^3.9.3"
+    "typescript": "^3.9.3",
+    "@types/puppeteer": "^3.0.2"
   },
   "dependencies": {
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
     "firebase": "^7.14.6",
-    "firebase-admin": "^8.12.1"
+    "firebase-admin": "^8.12.1",
+    "puppeteer": "^5.3.1"
   }
 }

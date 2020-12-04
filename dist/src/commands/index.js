@@ -17,7 +17,8 @@ const COMMANDS = {
     give: give,
 };
 export const execCommand = (msg) => __awaiter(void 0, void 0, void 0, function* () {
-    if (CALLSIGN.exec(msg.content)) {
+    console.log(msg.content, CALLSIGN.exec(msg.content), CALLSIGN);
+    if (CALLSIGN.test(msg.content)) {
         //checks if the command is calling this bot
         const msgArray = msg.content.split(" ");
         if (Object.keys(COMMANDS).includes(msgArray[1].toLowerCase())) {

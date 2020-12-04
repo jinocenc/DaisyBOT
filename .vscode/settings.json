@@ -1,0 +1,15 @@
+{
+  "files.eol": "\r\n",
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.validate": [
+    "javascript","typescript","vue","html"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+}

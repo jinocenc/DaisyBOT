@@ -4,14 +4,15 @@ import { help } from "./help";
 import { give } from "./give";
 
 type dm = import("discord.js").Message;
-const COMMANDS: { [key: string]: typeof advice} = {
+const COMMANDS: { [key: string]: typeof advice } = {
   "daisy,": advice,
-  help: help, 
+  help: help,
   give: give,
 };
 
 export const execCommand = async (msg: dm): Promise<void> => {
-  if (CALLSIGN.exec(msg.content)) {
+  console.log(msg.content, CALLSIGN.exec(msg.content),CALLSIGN );
+  if (CALLSIGN.test(msg.content)) {
     //checks if the command is calling this bot
     const msgArray = msg.content.split(" ");
     if (Object.keys(COMMANDS).includes(msgArray[1].toLowerCase())) {

@@ -1,8 +1,8 @@
 import Discord from "discord.js";
 export const embed = new Discord.MessageEmbed({
     title: "Daisy's Playhouse",
-    color: 0xf1c400,
-    url: 'https://github.com/jinocenc/DaisyBot',
+    color: "0xf1c400",
+    url: "https://github.com/jinocenc/DaisyBot",
     description: "Play with me! I need your attention :dog:",
     thumbnail: {
         url: "https://media.discordapp.net/attachments/549847390622973963/720909932529975296/DaisyAvatar.JPG",
