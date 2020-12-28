@@ -1,0 +1,18 @@
+version: '3'
+services:
+  daisy:
+    container_name: 'daisy-bot'
+    build: .
+    volumes:
+      - .:/usr/src/app
+  database:
+    image: 'mongo'
+    container_name: 'daisy-database'
+    environment:
+      - MONGO_INITDB_DATABASE=LOV
+      - MONGO_INITDB_ROOT_USERNAME=daisy
+      - MONGO_INITDB_ROOT_PASSWORD=discordjs
+    volumes:
+      - ./mongo-data:/var/lib/mongodb
+    ports:
+      - '27017:27017'
