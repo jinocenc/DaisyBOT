@@ -9,6 +9,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { embed } from "../util";
 export const help = (msg) => __awaiter(void 0, void 0, void 0, function* () {
-    msg.channel.send(embed);
+    yield msg.channel.send(embed);
     console.log("Help is on the way.");
 });

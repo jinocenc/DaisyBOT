@@ -2,16 +2,18 @@ import { CALLSIGN, ERROR_RESP } from "../const.js";
 import { advice } from "./advice";
 import { help } from "./help";
 import { give } from "./give";
+import { role } from "./quiz";
 
 type dm = import("discord.js").Message;
 const COMMANDS: { [key: string]: typeof advice } = {
   "daisy,": advice,
   help: help,
   give: give,
+  w2p: role,
 };
 
 export const execCommand = async (msg: dm): Promise<void> => {
-  console.log(msg.content, CALLSIGN.exec(msg.content),CALLSIGN );
+  if (!msg.guild) return;
   if (CALLSIGN.test(msg.content)) {
     //checks if the command is calling this bot
     const msgArray = msg.content.split(" ");

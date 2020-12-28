@@ -23,3 +23,70 @@ export const GIVE = [
   "_Daisy is hungry_",
   "_Daisy needs some love_",
 ];
+export const ADC = {
+  S: [
+    "Miss Fortune",
+    "Ashe",
+    "Vayne",
+    "Exreal",
+    "Draven",
+    "Kai'Sa",
+    "Jhin",
+    "Samira"
+  ],
+};
+export const SUP = {
+  S: [
+    "Alistar",
+    "Miss Fortune",
+    "Morgana",
+    "Janna",
+    "Maokai",
+    "Leona",
+    "Shen",
+    "Nautilus",
+    "Lulu",
+    "Nami",
+    "Thresh",
+    "Bard"
+  ]
+};
+export const MID = {
+  S: [
+    "Annie",
+    "Kataraina",
+    "Akali",
+    "Fizz",
+    "viktor",
+    "Diana",
+    "Zed",
+    "Ekko"
+  ]
+};
+export const JG = {
+  S: [
+    "Nunu & Willump",
+    "Jax",
+    "Evelynn",
+    "Amumu",
+    "Wukong",
+    "Graves",
+    "Hecarim",
+    "Kha'Zix",
+    "Kayn",
+    "Ekko"
+  ]
+};
+export const TOP = {
+  S: [
+    "Kayle",
+    "Jax",
+    "Malphite",
+    "Maokai",
+    "Wukong",
+    "Akali",
+    "Shen",
+    "Fiora",
+    "Camille"
+  ]
+};

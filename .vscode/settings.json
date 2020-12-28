@@ -12,4 +12,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "python.pythonPath": "scrapers/env/bin/python3",
 }

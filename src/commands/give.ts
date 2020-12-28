@@ -10,6 +10,6 @@ const THINGS: string[] = [
 export const give = async (msg: dm):  Promise<void> => {
   const msgArray = msg.content.split(" ");
   const i = Math.floor(Math.random() * GIVE.length);
-  if(THINGS.includes(msgArray[2].toLowerCase())) msg.channel.send(GIVE[i]);
-  else msg.channel.send(ERROR_RESP);
+  if(THINGS.includes(msgArray[2].toLowerCase())) await msg.channel.send(GIVE[i]);
+  else await msg.channel.send(ERROR_RESP);
 };

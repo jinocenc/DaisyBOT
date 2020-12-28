@@ -11,13 +11,16 @@ import { CALLSIGN, ERROR_RESP } from "../const.js";
 import { advice } from "./advice";
 import { help } from "./help";
 import { give } from "./give";
+import { role } from "./quiz";
 const COMMANDS = {
     "daisy,": advice,
     help: help,
     give: give,
+    w2p: role,
 };
 export const execCommand = (msg) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(msg.content, CALLSIGN.exec(msg.content), CALLSIGN);
+    if (!msg.guild)
+        return;
     if (CALLSIGN.test(msg.content)) {
         //checks if the command is calling this bot
         const msgArray = msg.content.split(" ");

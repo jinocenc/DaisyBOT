@@ -1,4 +1,9 @@
 import Discord from "discord.js";
+import {MongoClient} from "mongodb";
+
+
+export const client = new Discord.Client();
+
 
 export const embed = new Discord.MessageEmbed({
   title: "Daisy's Playhouse",
@@ -27,4 +32,3 @@ export const embed = new Discord.MessageEmbed({
     icon_url: "https://media.discordapp.net/attachments/549847390622973963/720922742467330138/huh_dog.png",
   }
 });
-export const client = new Discord.Client();
