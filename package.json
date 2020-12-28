@@ -1,5 +1,5 @@
 {
-  "name": "DaisyBOT",
+  "name": "daisy-bot",
   "version": "1.0.1",
   "description": "",
   "main": "./main.js",
@@ -10,8 +10,8 @@
   "type": "module",
   "scripts": {
     "cjs": "tsc -d",
-    "build": "npm run cjs",
-    "start": "nohup node --es-module-specifier-resolution=node -r dotenv/config ./dist/index.js > /dev/null 2 > &1 & pgrep -n > save.pid"
+    "build": "npm run cjs && node --es-module-specifier-resolution=node ./dist/src/index.js",
+    "start": "nodemon --exec npm run build --ignore dist/ -e  ts"
   },
   "repository": {
     "type": "git",
@@ -25,17 +25,15 @@
   },
   "homepage": "https://github.com/jinocenc/DaisyBOT#readme",
   "devDependencies": {
+    "@types/mongodb": "^3.6.3",
     "@typescript-eslint/eslint-plugin": "^3.0.2",
     "@typescript-eslint/parser": "^3.0.0",
     "eslint": "^7.1.0",
-    "typescript": "^3.9.3",
-    "@types/puppeteer": "^3.0.2"
+    "nodemon": "^2.0.6",
+    "typescript": "^3.9.3"
   },
   "dependencies": {
     "discord.js": "^12.2.0",
-    "dotenv": "^8.2.0",
-    "firebase": "^7.14.6",
-    "firebase-admin": "^8.12.1",
-    "puppeteer": "^5.3.1"
+    "mongodb": "^3.6.3"
   }
 }
