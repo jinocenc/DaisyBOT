@@ -8,4 +8,7 @@ client.once("ready", () => {
 
 client.on("message", execCommand);
 
-client.login(config.token);
+client.login(config.token).catch(err => {
+  console.error("invalid bot token")
+  process.exitCode = 1;
+});
